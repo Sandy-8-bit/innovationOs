@@ -1,15 +1,26 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
+
+import AuthPage from './pages/auth/AuthLayout'
 import './App.css'
-import UploadExample from './pages/Uploadexample'
-
 function App() {
-
   return (
-    <>
-<div>
+    <Routes>
+      <Route
+        path="/login"
+        element={<AuthPage type="login" />}
+      />
 
-<UploadExample/>
-</div>
-    </>
+      <Route
+        path="/signup"
+        element={<AuthPage type="signup" />}
+      />
+
+      {/* Default Route */}
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      />
+    </Routes>
   )
 }
 
