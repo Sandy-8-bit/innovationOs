@@ -1,5 +1,5 @@
     import { Link } from 'react-router-dom'
-    import { Input } from '../../components/ui/input'
+    import { Input } from '../../components/ui/Input'
     import { Button } from '../../components/ui/Button'
     import { EyeOff } from 'lucide-react'
 
